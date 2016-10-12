@@ -1,0 +1,41 @@
+Files Submitted:
+-Java (dir)
+	-LightMsg.java
+	-Reporter.java
+-Light (dir)
+	-Light.h
+	-LightAppC.nc
+	-LightC.nc
+	-Makefile
+-Receiver (dir)
+	-ReceiverAppC.nc
+	-ReceiverC.nc
+	-Makefile
+-651 Project Report.doc
+-csvmaker.py
+-dataFile
+-README (this file)
+
+About:
+-Java:
+	Contains a java application which should be run on the laptop which the receiving mote is connected to. This app is hardcoded to use USB0 (i.e. /dev/ttyUSB0).
+	To compile: % javac *.java
+	To run: % java Reporter <data file>
+
+-Light:
+	Contains an application to run on the mote which will be collecting and sending light data.
+	To compile and install: % make <platform> install ;where <platform> is telosb, etc.
+	
+-Receiver:
+	Contains an application to run on the mote which is receiving messages and forwarding them to the laptop.
+	To compile and install: % make <platform> install ;where <platform> is telosb, etc.
+
+-651 Project Report.doc:
+	This is the project report.
+
+-csvmaker.py:
+	A python script for converting the data file to a .csv for import into excel so that a graph can be made.
+	Usage: % python csvmaker.py <data file> <output .csv file>
+
+-dataFile:
+	Contains the data output from the java application collected from 5-30 to 6-3.
